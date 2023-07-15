@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	long long n, p;
+	cin>>n>>p;
+	long long dem=0;
+	for(long long i=p;i<=n;i*=p){
+		dem+=(n/i);
+	}
+	cout<<dem;
+}
