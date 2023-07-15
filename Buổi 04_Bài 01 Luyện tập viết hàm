@@ -1,0 +1,211 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+bool songuyento(long long n)
+{
+	if( n <2)
+	{
+		return false;
+	}
+	for (long long i=2; i <= sqrt(n); i++)
+	{
+		if(n % i ==0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+int tongchuso(long long n)
+{
+	long long sum =0;
+	while(n >0)
+	{
+		sum += n %10;
+		n /=10;
+		
+	}
+	return sum;
+	
+}
+int tongchusochan(long long n)
+{
+	long long sum =0;
+	while(n >0)
+	{
+		int x = n%10;
+		if(x % 2 ==0)
+		{
+			sum += x;
+		}
+		n /= 10;
+	}
+	return sum;
+}
+int tongnguyento(long long n)
+{
+	long long sum =0;
+	while(n > 0)
+	{
+		int x = n%10;
+		if(songuyento(x))
+		{
+			sum += x;
+		}
+		n /=10;
+	}
+	return sum;
+}
+int solatnguoc(long long n)
+{
+	long long dao =0;
+	while(n >0)
+	{
+		dao = dao*10 + n % 10;
+		n /= 10;
+	}
+	return dao;
+}
+int soluonguocnguyento(long long n)
+{
+	int dem =0;
+	for(long long i=1; i <=n; i++)
+	{
+		if(n % i ==0)
+		{
+			if(songuyento(i))
+			{
+				dem ++;
+			}
+		}
+	}
+	return dem;
+	
+}
+int uocnguyentomax(long long n)
+{
+	int max =2;
+	for(long long i=1; i <=n; i++)
+	{
+		if(n % i ==0)
+		{
+			if(songuyento(i))
+			{
+				max =i;
+			}
+		}
+	}
+	return max;
+}
+bool kiemtra(long long n)
+{
+	while(n >0)
+	{
+		int x;
+		x = n%10;
+		if(x ==6)
+		{
+			return true;
+		}
+		n /= 10;
+	}
+	return false;
+	
+}
+bool kiemtra2(long long n)
+{
+	if(tongchuso(n) % 8 ==0)
+	{
+		return true;
+	}
+	return false;
+}
+int giaithua(long long n)
+{
+	long long giaithua =1;
+	for(int i=1; i <=n; i++)
+	{
+		giaithua *= i;
+	}
+	return giaithua;
+}
+int tonggiaithua(long long n)
+{
+	long long sum =0;
+	while(n >0)
+	{
+		int x;
+		x = n % 10;
+		sum += giaithua(x);
+		n /= 10;
+	}
+	return sum;
+}
+bool kiemtra3(long long n)
+{
+	if(solatnguoc(n) == n)
+	{
+		return true;
+	}
+	return false;
+}
+bool kiemtra4(long long n)
+{
+	int max = n%10;
+	while(n >0)
+	{
+		int x;
+		x = n%10;
+		if(x > max)
+		{
+			return false;
+		}
+		n /=10;
+	}
+		return true;
+}
+int dem(long long n)
+{
+	long long dem =0;
+	while(n >0)
+	{
+		int x;
+		x = n%10;
+		dem ++;
+		n /= 10;
+	}
+	return dem;
+}
+int tongluythua(long long n)
+{
+	long long sum =0;
+	int t = dem(n);
+	while(n >0)
+	{
+		int x;
+		x = n %10;
+		sum += pow(x, t);
+		n /=10;
+	}
+	return sum;
+}
+int main()
+{
+	long long n;
+	cin >> n;
+	cout << songuyento(n) << "\n";
+	cout << tongchuso(n) << "\n";
+	cout << tongchusochan(n) << " \n" ;
+	cout << tongnguyento(n) << "\n";
+	cout << solatnguoc(n) << "\n";
+	cout << soluonguocnguyento(n) << "\n";
+	cout << uocnguyentomax(n) << "\n";
+	cout << kiemtra(n) << "\n";
+	cout << kiemtra2(n) << "\n";
+	cout << tonggiaithua(n) << "\n";
+	cout << kiemtra3(n) << "\n";
+	cout << kiemtra4(n) << "\n";
+	cout << tongluythua(n) << "\n";
+	return 0;
+	
+}
