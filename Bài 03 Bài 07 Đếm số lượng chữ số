@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long n;
+	int dem=0;
+	cin>>n;
+while(n){
+    int x=n%10;
+    ++dem;
+    n/=10;
+    
+}
+cout<<dem;
+}
