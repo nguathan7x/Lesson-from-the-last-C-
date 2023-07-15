@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	long long n;
+	cin>>n; 
+	for(long long i=1;i<=n;i++){
+		
+		for(long long j=1;j<2*n;j++){
+			if(abs(n-j)<=(i-1))
+			cout<<" *";
+			else
+			cout<<"  ";
+		}
+		cout<<endl;
+	
+	} return 0;
+}
