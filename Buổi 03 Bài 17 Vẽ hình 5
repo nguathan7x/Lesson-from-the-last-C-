@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	long long n;
+	cin>>n; 
+	for(long long i=1;i<=n;i++){
+		
+		for(long long j=1;j<=n;j++){
+			if(i==j||i==(n-j+1))
+			cout<<i;
+			else
+			cout<<"  ";
+		}
+		cout<<endl;
+	
+	} return 0;
+}
