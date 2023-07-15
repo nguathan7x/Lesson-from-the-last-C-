@@ -1,0 +1,40 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+void buoi4bai14(int a, int b)
+{
+	bool kq = false;
+	for (int i = a; i <= b; i++)
+	{
+		int k;
+		bool xd = false;
+		int sum = 0;
+		int m = i, dao = 0;
+		while (m)
+		{
+			int x=m% 10;
+			dao = dao * 10 + m % 10;
+			m /= 10;
+			sum += x;
+			if (x == 6)
+			{
+				xd = true;
+			}
+		}
+		k = sum % 10;
+		if (xd == true && k == 8&& dao==i)
+		{
+			cout << i << " ";
+			kq = true;
+		}
+	}
+	if (kq == false)
+		cout << "-1";
+}
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	buoi4bai14(a,b);
+	return 0;
+}
