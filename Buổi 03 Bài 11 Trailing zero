@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long n,kq=0;
+	cin>>n;
+	for(;n>=5;)
+	{
+		n/=5;
+		kq=kq+n;
+	}
+	cout<<kq;
+	return 0;
+}
