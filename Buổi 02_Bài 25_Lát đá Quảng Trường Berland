@@ -1,0 +1,11 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	long long n,m,a;
+	cin>>n>>m>>a;
+	long long cd=ceil(1.0*m/a);
+	long long cr=ceil(1.0*n/a);
+	cout<<cd*cr;
+}
