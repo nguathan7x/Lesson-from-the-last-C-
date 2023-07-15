@@ -1,0 +1,16 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+void SoChinhPhuong(long long n){
+	cin>>n;
+	long long sqr=sqrt(n);
+	if(sqr*sqr==n)
+	cout<<"YES";
+	else
+	cout<<"NO";
+}
+int main(){
+	long long n;
+	SoChinhPhuong(n);
+	
+}
