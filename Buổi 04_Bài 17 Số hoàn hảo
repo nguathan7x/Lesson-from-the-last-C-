@@ -1,0 +1,40 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+bool nt(long long n)
+{
+	for (int i = 2; i <= sqrt(n); i++)
+	{
+		if (n % i == 0)
+		{
+			return false;
+		}
+	}
+	return n > 1;
+}
+bool hoanhao(long long n)
+{
+	for (int i = 2; i <= 32; i++)
+	{
+		if (nt(i))
+		{
+			long long tmp = (long long)pow(2, i) - 1;
+			if (nt(tmp))
+			{
+				long long hh = (long long)pow(2, i - 1) * tmp;
+				if (hh == n)return true;
+			}
+		}
+	}
+	return false;
+}
+int main()
+{
+	long long n;
+	cin >> n;
+	if (hoanhao(n))
+	{
+		cout << "YES";
+	}
+	else cout << "NO";
+}
