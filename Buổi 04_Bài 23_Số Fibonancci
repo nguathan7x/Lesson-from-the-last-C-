@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+//Fibonaci thứ n không dùng mảng
+long long fibonaci(long long n){
+    long long a=0,b=1,c=0;
+    if(n==1) return 0;
+    if(n==2) return 1;
+    for(long long i=3;i<=n;i++){
+        c=a+b; //Tính được số fibonaci thứ i
+        a=b;
+        b=c;
+    }
+    return c;
+}
+
+int main() {
+   long long n;cin>>n;
+   cout<<fibonaci(n);
+}
