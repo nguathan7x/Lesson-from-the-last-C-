@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    long long tich=1;
+    for(int i=1;i<=n;i++){
+    	int x;
+    	cin>>x;
+    	x%=1000000007;
+    	tich*=x;
+    	tich%=1000000007;
+	}
+	cout<<tich;
+}
