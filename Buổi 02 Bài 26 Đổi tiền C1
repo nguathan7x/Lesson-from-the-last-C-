@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int tien,dem1=0,dem2=0,dem3=0,dem4=0,dem5=0;
+cin>>tien;
+while(tien>=100){
+dem1=tien/100; 
+tien=tien%100;
+break;
+}
+while(tien>=20){
+
+dem2=tien/20; 
+tien=tien%20;
+break;}
+while(tien>=10){
+	dem3=tien/10; 
+tien=tien%10;
+break;}
+while(tien>=5){
+		dem4=tien/5; 
+tien=tien%5;
+break;
+}
+while(tien>=1){
+		dem5=tien; 
+break;}
+cout<<dem1+dem2+dem3+dem4+dem5;
+}
