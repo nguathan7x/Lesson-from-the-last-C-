@@ -1,0 +1,25 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+bool sochinhphuong(int n) {
+	int sqrt_n = sqrt(n);
+	if (1ll * sqrt_n * sqrt_n == n)
+		return true;
+	return false;
+}
+
+int main() {
+	long long a, b;
+	cin >> a >> b;
+	int dem = 0;
+	for (int i = sqrt(a); i <= sqrt(b); i++)
+	{
+		long long tam =1ll* i * i;
+		if (tam >= a && tam <= b)
+		{
+			cout << tam << " ";
+		}
+	}
+	return 0;
+}
