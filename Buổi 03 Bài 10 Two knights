@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long n,s,h;
+	cin>>n;
+	if(n>0&&n<100000){
+	for(long long i=1;i<=n;i++)
+	{
+		s=((i*i)*((i*i)-1))/2;
+		h=4*(i-1)*(i-2);
+		cout<<s-h<<endl;
+	}return 0; 
+}
+}
