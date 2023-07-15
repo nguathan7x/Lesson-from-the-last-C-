@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long n;
+	int dem=0,c=0,l=0;
+	cin>>n;
+while(n){
+    int x=n%10;
+    if(x%2==0)
+    c=c+x;
+    else
+    l=l+x;
+    n/=10;
+    
+}
+cout<<c<<"\t"<<l;
+}
